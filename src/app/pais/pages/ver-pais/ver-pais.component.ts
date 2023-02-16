@@ -25,6 +25,8 @@ export class VerPaisComponent implements OnInit {
       .subscribe( resp => {
         console.log( resp );
       });
+    //este código comentado es funcionalmente igual que el de arriba, pero más 
+    //simple, fácil de entender.
 
     //this.activatedRoute.params
     //  .subscribe( ({ id }) => {
@@ -34,9 +36,6 @@ export class VerPaisComponent implements OnInit {
     //      .subscribe( pais => {
     //          console.log( pais );
     //      });
-    //  });
-      
+    //  });      
   }
-
-  
 }
