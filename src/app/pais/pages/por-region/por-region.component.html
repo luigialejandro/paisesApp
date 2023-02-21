@@ -22,13 +22,9 @@
         <!-- La tercera forma es la que ya esta implementada -->
 
         <button *ngFor="let region of regiones"
-                class="btn btn-outline-primary" 
-                [ngClass]="{
-                    'btn-primary': region === regionActiva,
-                    'btn-outline-primary': region !== regionActiva 
-                }"
+                [class]="getClassCSS( region )"
                 (click)="activarRegion( region )" >
-            {{ region }}
+            {{ region | titlecase }}
         </button>
     </div>
 </div>
