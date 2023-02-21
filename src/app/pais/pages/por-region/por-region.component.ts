@@ -4,8 +4,22 @@ import { Component } from '@angular/core';
   selector: 'app-por-region',
   templateUrl: './por-region.component.html',
   styles: [
+    `
+    button {
+      margin-right: 5px;
+    }
+    `
   ]
 })
 export class PorRegionComponent {
+
+  regiones: string[] = ['africa', 'americas', 'asia', 'europe', 'oceania']; 
+  regionActiva: string = '';
+
+  activarRegion( region:string ) {
+    this.regionActiva = region;
+
+    //TODO: Hacer el llamado al servicio
+  }
 
 }
