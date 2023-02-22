@@ -1,31 +1,33 @@
-<h3>Buscar por región <small> {{ regionActiva | titlecase }} </small></h3>
-<hr />
+<div class="animate__animated animate__fadeIn animate__faster">
+    <h3>Buscar por región <small> {{ regionActiva | titlecase }} </small></h3>
+    <hr />
 
-<h5>Seleccione la región</h5>
+    <h5>Seleccione la región</h5>
 
-<div class="row">
-    <div class="col">
+    <div class="row">
+        <div class="col">
 
-        <!-- Primera forma de usar clases condicionales -->
-        <!-- [class.btn-primary] = "region === regionActiva" -->
+            <!-- Primera forma de usar clases condicionales -->
+            <!-- [class.btn-primary] = "region === regionActiva" -->
 
-        <!-- Primera forma de usar clases condicionales -->
-        <!-- 
+            <!-- Primera forma de usar clases condicionales -->
+            <!-- 
 
-            [ngClass]="{
-                    'btn-primary': region === regionActiva,
-                    'btn-outline-primary': region !== regionActiva 
-                }"
+                [ngClass]="{
+                        'btn-primary': region === regionActiva,
+                        'btn-outline-primary': region !== regionActiva 
+                    }"
 
-         -->
+            -->
 
-        <!-- La tercera forma es la que ya esta implementada -->
+            <!-- La tercera forma es la que ya esta implementada -->
 
-        <button *ngFor="let region of regiones"
-                [class]="getClassCSS( region )"
-                (click)="activarRegion( region )" >
-            {{ region | titlecase }}
-        </button>
+            <button *ngFor="let region of regiones"
+                    [class]="getClassCSS( region )"
+                    (click)="activarRegion( region )" >
+                {{ region | titlecase }}
+            </button>
+        </div>
     </div>
 </div>
 
